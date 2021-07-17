@@ -4,7 +4,7 @@ import {Dropdown} from 'react-bootstrap'
 import './style.css';
 import '../../common.css';
 
-import {rows, cols} from './_data';
+import {_rows, _cols} from './_data';
 
 const Helpline = () => {
 
@@ -142,7 +142,7 @@ const Helpline = () => {
                                 {country == "" ? "Select Country" : country}
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
-                                {rows.map(renderDropdownItem)}
+                                {_rows.map(renderDropdownItem)}
                             </Dropdown.Menu>
                         </Dropdown>
                     </div>
@@ -154,9 +154,9 @@ const Helpline = () => {
                     <div className="helpline-content">
                         <table className="helpline-table">
                             <tr>
-                                {cols.map(renderHelplineColumns)}
+                                {_cols.map(renderHelplineColumns)}
                             </tr>
-                            {country !== "" && rows.find(e => e.country === country).organisation.map(renderHelplineRows)}
+                            {country !== "" && _rows.find(e => e.country === country).organisation.map(renderHelplineRows)}
                         </table>    
                     </div>
                 </div>

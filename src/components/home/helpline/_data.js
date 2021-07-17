@@ -1,4 +1,4 @@
-export const cols = [
+export const _cols = [
     //organization structure
     "name",
     "contact | operating hours",
@@ -6,7 +6,7 @@ export const cols = [
     "location",
 ]
 
-export const rows = [
+export const _rows = [
     {
         "country": "Australia",
         "organisation": [

@@ -1,4 +1,4 @@
-export const facts = [
+export const _facts = [
     "Mental, neurological and substance use disorders make up 10% of the global burdern of disease and 30% of non-fatal disease burden.",
     "Around 1 in 5 of the world's children and adolescents have a mental disorder.",
     "Depression is one of the leading causes of disability, affecting 264 million people.",

@@ -9,9 +9,9 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import '../../common.css';
 import './style.css';
 
-import {facts} from './_facts';
-import {disorders} from './_disorders';
-import {rows, cols} from './_chartTable';
+import {_facts} from './_facts';
+import {_disorders} from './_disorders';
+import {_rows, _cols} from './_chartTable';
 
 
 import DisorderModal from '../modal/disorderModal';
@@ -102,7 +102,7 @@ const Factsheet = () => {
         <AccordionDetails>
           <Typography>
             <ul>
-                {facts.map(renderFacts)}
+                {_facts.map(renderFacts)}
             </ul>
             <a style={{fontStyle: "italic"}} target="_blank" rel="noreferrer" href="https://www.who.int/news-room/facts-in-pictures/detail/mental-health">Source</a>
           </Typography>
@@ -119,7 +119,7 @@ const Factsheet = () => {
         <AccordionDetails>
           <Typography>
             <ul>
-                {disorders.map(renderDisorders)}
+                {_disorders.map(renderDisorders)}
             </ul>
             <span style={{fontStyle: "italic"}}> 
             Sources:&nbsp;
@@ -141,9 +141,9 @@ const Factsheet = () => {
         <AccordionDetails>
         <table className="factsheet-table">
             <tr>
-                {cols.map(renderTableColumns)}
+                {_cols.map(renderTableColumns)}
             </tr>
-            {rows.map(renderTable)}
+            {_rows.map(renderTable)}
             <span style={{fontStyle: "italic", marginTop: "20px"}}>
             <br/>
             <a target="_blank" rel="noreferrer" href="https://ourworldindata.org/mental-health">Click here for more info</a>

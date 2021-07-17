@@ -17,8 +17,8 @@
 
 .factsheet-table tr:nth-child(even){background-color: #f2f2f2;}
 
-/* .factsheet-table tr:hover {background-color: #ddd;} */
-
+.factsheet-table tr:hover {background-color: #ddd;}
+.factsheet-table tr:hover:nth-child(2){background-color: #f2f2f2 !important;}
 .factsheet-table th {
     padding-top: 12px;
     padding-bottom: 12px;

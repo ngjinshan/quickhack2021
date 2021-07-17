@@ -1,11 +1,11 @@
-export const cols = [
+export const _cols = [
     "Disorder",
     "Share of global population with disorder (2017) [difference across countries]",
     "Number of people with the disorder (2017)",
     "Share of males:females with disorder"
 ]
 
-export const rows = [
+export const _rows = [
     {
         "disorder" : "Any mental health disorder",
         "percentage" : "10.7%",

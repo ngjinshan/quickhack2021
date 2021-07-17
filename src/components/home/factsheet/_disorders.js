@@ -1,4 +1,4 @@
-export const disorders = [
+export const _disorders = [
     {
         "name": "Anxiety",
         "link": "https://www.healthline.com/health/anxiety",
