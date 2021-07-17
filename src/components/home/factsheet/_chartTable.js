@@ -74,7 +74,7 @@ export const rows = [
         "number" : "107 million",
         "malePercentage" : "2% males",
         "femalePercentage" : "0.8% females",
-        "link" : "",
+        "link" : "https://ourworldindata.org/grapher/share-with-alcohol-use-disorders",
     },
     {
         "disorder" : "Drug use disorder (excluding alcohol)",
@@ -83,6 +83,6 @@ export const rows = [
         "number" : "71 million",
         "malePercentage" : "1.3% males",
         "femalePercentage" : "0.6% females",
-        "link" : "",
+        "link" : "https://ourworldindata.org/grapher/share-with-drug-use-disorders",
     },
 ]
