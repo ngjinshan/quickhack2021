@@ -4,6 +4,7 @@ import Factsheet from './factsheet/';
 import Helpline from './helpline/'
 
 import '../common.css'
+import Volunteer from './volunteer';
 
 const Home = () => {
     return(
@@ -11,6 +12,7 @@ const Home = () => {
             <Intro></Intro>
             <Factsheet></Factsheet>
             <Helpline></Helpline>
+            <Volunteer></Volunteer>
         </div>
     )
 }
