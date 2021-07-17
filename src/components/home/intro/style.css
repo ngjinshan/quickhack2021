@@ -1,0 +1,7 @@
+.intro .intro-header, .intro .intro-description {
+    text-align: left;
+}
+
+.intro-video {
+    animation: fadein 3s;
+}
