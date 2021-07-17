@@ -1,10 +1,9 @@
 export const dataStructure = [
     //organization structure
     "name",
-    "contactNumber",
-    "operatingHour", //broken down into 24/7 || start-end hour
+    "contact | operating hours",
+    "link",
     "location",
-    "link" 
 ]
 
 export const data = [

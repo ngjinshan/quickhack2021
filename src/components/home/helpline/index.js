@@ -25,30 +25,46 @@ const Helpline = () => {
     }
 
     const renderHelplineRows = (data, index) => {
-        console.log(data)
-    }
-
-    const renderHelplineRow = (data, index) => {
         return(
             <tr key={index}>
                 <td>
                     {data.name}
                 </td>
                 <td>
-                    test 1
-                </td>
-                <td>
-                    test 2
-                </td>
-                <td>
-                    {data.location}
+                    <table className="helpline-inner-table">
+                        {data.contact.map(renderHelplineContact)}
+                    </table>
                 </td>
                 <td>
                     {data.link}
                 </td>
+                <td>
+                    {data.location ? data.location : "-"}
+                </td>
             </tr>
         )
     }
+
+    const renderHelplineContact = (data, index) => {
+        let operatingHours = ""
+        if(data["24/7"]){
+            operatingHours = "Open 24 hours 7 days a week";
+        }
+        else{
+            
+        }
+        return(
+            <tr key={index}>
+                <td>
+                    {data.contactNumber}
+                </td>
+                <td>
+                    {operatingHours}
+                </td>
+            </tr>
+        )
+    }
+
 
     return(
         <div className="helpline common">
@@ -79,7 +95,7 @@ const Helpline = () => {
                             <tr>
                                 {dataStructure.map(renderHelplineColumns)}
                             </tr>
-                            {data.map(renderHelplineRows)}
+                            {data.find(e => e.country === "Australia").organisation.map(renderHelplineRows)}
                         </table>    
                     </div>
                 </div>

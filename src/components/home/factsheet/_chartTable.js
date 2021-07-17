@@ -4,5 +4,3 @@ export const columns = [
     "Number of people with the disorder (2017)",
     ""
 ]
-
-export const 
