@@ -1,4 +1,4 @@
-export const dataStructure = [
+export const cols = [
     //organization structure
     "name",
     "contact | operating hours",
@@ -6,7 +6,7 @@ export const dataStructure = [
     "location",
 ]
 
-export const data = [
+export const rows = [
     {
         "country": "Australia",
         "organisation": [
@@ -555,5 +555,178 @@ export const data = [
             }
         ],
         "emergencyContact": "113"
+    },
+    {
+        "country" : "United States",
+        "organisation" : [
+            {
+                "name" : "Boys Town National Hotline",
+                "contact" : [
+                    {
+                        "contactNumber" : "800-448-3000",
+                        "24/7": true,
+                        "operatingStartHour" : [],
+                        "operatingEndHour" : []
+                    }
+                ],
+                "location": "14100 Crawford Street Boys Town, NE 68010",
+                "link" :"https://www.boystown.org/Pages/contact.aspx"
+            },
+            {
+                "name" : "California Youth Crisis Line",
+                "contact" : [
+                    {
+                        "contactNumber" : "1 (800) 843-5200",
+                        "24/7": true,
+                        "operatingStartHour" : [],
+                        "operatingEndHour" : []
+                    }
+                ],
+                "location": "PO Box 161448 Sacramento, CA 95816",
+                "link" :"https://calyouth.org/cycl/"
+            },
+            {
+                "name" : "Careline Crisis Intervention",
+                "contact" : [
+                    {
+                        "contactNumber" : "1-877-266 4357",
+                        "24/7": true,
+                        "operatingStartHour" : [],
+                        "operatingEndHour" : []
+                    },
+                    {
+                        "contactNumber" : "(907) 452 4357",
+                        "24/7": true,
+                        "operatingStartHour" : [],
+                        "operatingEndHour" : []
+                    }
+                ],
+                "location": "726 26th Ave., Fairbanks, AK 99701",
+                "link" :"https://carelinealaska.com/"
+            },
+            {
+                "name" : "C.O.P.E. Center Helpline",
+                "contact" : [
+                    {
+                        "contactNumber" : "262-377-2673",
+                        "24/7": true,
+                        "operatingStartHour" : [],
+                        "operatingEndHour" : []
+                    }
+                ],
+                "location": "121 W. Main St. Port Washington, WI 53074",
+                "link" :"https://www.co.ozaukee.wi.us/265/Crisis-Management-Services"
+            }
+        ],
+        "emergencyContact": "911"
+    },
+    {
+        "country" : "United Kingdom",
+        "organisation" : [
+            {
+                "name" : "Samaritans UK & Ireland",
+                "contact" : [
+                    {
+                        "contactNumber" : "116123",
+                        "24/7": true,
+                        "operatingStartHour" : [],
+                        "operatingEndHour" : []
+                    }
+                ],
+                "location": null,
+                "link" : "https://www.samaritans.org/"
+            },
+            {
+                "name" : "Connect Counselling",
+                "contact" : [
+                    {
+                        "contactNumber" : "1800 477 477 (Ireland)",
+                        "24/7": false,
+                        "operatingStartHour" : ["1800", null, null, "1800", "1800", "1800", "1800"],
+                        "operatingEndHour" : ["2200", null, null, "2200", "2200", "2200", "2200"]
+                    },
+                    {
+                        "contactNumber" : "00800 477 477 77 ( UK and Northern Ireland)",
+                        "24/7": false,
+                        "operatingStartHour" : ["1800", null, null, "1800", "1800", "1800", "1800"],
+                        "operatingEndHour" : ["2200", null, null, "2200", "2200", "2200", "2200"]
+                    }
+                ],
+                "location": null,
+                "link" : "https://www.samaritans.org/"
+            },
+            {
+                "name" : "Calm",
+                "contact" : [
+                    {
+                        "contactNumber" : "0800 585858",
+                        "24/7": true,
+                        "operatingStartHour" : ["1700", "1700", "1700", "1700", "1700", "1700", "1700"],
+                        "operatingEndHour" : ["0000", "0000", "0000", "0000", "0000", "0000", "0000"]
+                    }
+                ],
+                "location": null,
+                "link" : "https://www.thecalmzone.net/"
+            },
+            {
+                "name" : "Calm",
+                "contact" : [
+                    {
+                        "contactNumber" : "0800 068 4141",
+                        "24/7": true,
+                        "operatingStartHour" : ["0900", "0900", "0900", "0900", "0900", "0900", "0900"],
+                        "operatingEndHour" : ["0000", "0000", "0000", "0000", "0000", "0000", "0000"]
+                    }
+                ],
+                "location": "Lineva House, 28-32 Milner Street, Warrington, Cheshire, WA5 1AD",
+                "link" : "https://www.papyrus-uk.org/hopelineuk/"
+            },
+        ],
+        "emergencyContact": "999"
+    },
+    {
+        "country" : "Canada",
+        "organisation" : [
+            {
+                "name" : "Canadian Mental Health Association - Edmonton Region",
+                "contact" : [
+                    {
+                        "contactNumber" : "780-482-4357",
+                        "24/7": true,
+                        "operatingStartHour" : [],
+                        "operatingEndHour" : []
+                    }
+                ],
+                "location": "300-10010 105 Street NW, Edmonton, AB T5J 1C4",
+                "link" : "https://edmonton.cmha.ca/"
+            },
+            {
+                "name" : "Centre de prévention suicide de la Haute-Yamaska",
+                "contact" : [
+                    {
+                        "contactNumber" : "450-375-4252",
+                        "24/7": true,
+                        "operatingStartHour" : [],
+                        "operatingEndHour" : []
+                    }
+                ],
+                "location": "328 rue Principale, bureau 220 Granby (Québec) J2G 2W4",
+                "link" : "https://www.cpshy.qc.ca/"
+            },
+            {
+                "name" : "Centre Prévention Suicide Faubourg",
+                "contact" : [
+                    {
+                        "contactNumber" : "1-866-277-3553",
+                        "24/7": true,
+                        "operatingStartHour" : [],
+                        "operatingEndHour" : []
+                    }
+                ],
+                "location": null,
+                "link" : "https://cps-le-faubourg.org/"
+            }
+        ],
+        "emergencyContact": "911"
     }
 ]

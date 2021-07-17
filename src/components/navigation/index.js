@@ -40,8 +40,8 @@ const Navigation = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mx-auto">
-                {/*  */}
             <Nav.Link onClick={e => navigate("factsheet")}>Factsheet</Nav.Link>
+            <Nav.Link onClick={e => navigate("diagnosis")}>Self Diagnosis</Nav.Link>
             <Nav.Link onClick={e => navigate("helpline")}>Helpline</Nav.Link>
             <Nav.Link onClick={e => navigate("volunteer")}>Volunteer Today</Nav.Link>
             <Nav.Link onClick={e => navigate("webinar")}>Webinar</Nav.Link>

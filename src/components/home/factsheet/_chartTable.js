@@ -1,3 +1,10 @@
+export const cols = [
+    "Disorder",
+    "Share of global population with disorder (2017) [difference across countries]",
+    "Number of people with the disorder (2017)",
+    "Share of males:females with disorder"
+]
+
 export const rows = [
     {
         "disorder" : "Any mental health disorder",
@@ -13,6 +20,7 @@ export const rows = [
         "number" : "264 million",
         "malePercentage" : "2.7% males",
         "femalePercentage" : "4.1% females",
+        "link" : "https://ourworldindata.org/grapher/share-with-depression"
     },
     {
         "disorder" : "Anxiety disorders",
@@ -21,6 +29,7 @@ export const rows = [
         "number" : "284 million",
         "malePercentage" : "2.8% males",
         "femalePercentage" : "4.7% females",
+        "link" : "https://ourworldindata.org/grapher/share-with-anxiety-disorders",
     },
     {
         "disorder" : "Bipolar disorders",
@@ -29,6 +38,7 @@ export const rows = [
         "number" : "46 million",
         "malePercentage" : "0.55% males",
         "femalePercentage" : "0.65% females",
+        "link" : "https://ourworldindata.org/grapher/share-with-bipolar-disorder",
     },
     {
         "disorder" : "Eating disorders",
@@ -37,6 +47,7 @@ export const rows = [
         "number" : "16 million",
         "malePercentage" : "0.13% males",
         "femalePercentage" : "0.29% females",
+        "link" : "https://ourworldindata.org/grapher/share-with-an-eating-disorder",
     },
     {
         "disorder" : "Schizophrenia",
@@ -45,6 +56,7 @@ export const rows = [
         "number" : "20 million",
         "malePercentage" : "0.26% males",
         "femalePercentage" : "0.25% females",
+        "link" : "https://ourworldindata.org/grapher/share-of-population-with-schizophrenia",
     },
     {
         "disorder" : "Any mental or substance use disorder",
@@ -53,6 +65,7 @@ export const rows = [
         "number" : "970 million",
         "malePercentage" : "12.6% males",
         "femalePercentage" : "13.3% females",
+        "link" : "https://ourworldindata.org/grapher/share-with-mental-and-substance-disorders",
     },
     {
         "disorder" : "Alcohol use disorder",
@@ -61,6 +74,7 @@ export const rows = [
         "number" : "107 million",
         "malePercentage" : "2% males",
         "femalePercentage" : "0.8% females",
+        "link" : "",
     },
     {
         "disorder" : "Drug use disorder (excluding alcohol)",
@@ -69,5 +83,6 @@ export const rows = [
         "number" : "71 million",
         "malePercentage" : "1.3% males",
         "femalePercentage" : "0.6% females",
+        "link" : "",
     },
 ]

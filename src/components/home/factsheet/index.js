@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -11,8 +11,11 @@ import './style.css';
 
 import {facts} from './_facts';
 import {disorders} from './_disorders';
-import {rows} from './_chartTable';
+import {rows, cols} from './_chartTable';
 
+
+import DisorderModal from '../modal/disorderModal';
+import TableModal from '../modal/tableModal';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -27,6 +30,12 @@ const useStyles = makeStyles((theme) => ({
 const Factsheet = () => {
   const classes = useStyles();
 
+  const [showDisorderModal, setShowDisorderModal] = useState(false);
+  const [disorderModalProps, setDisorderModalProps] = useState();
+
+  const [showTableModal, setShowTableModal] = useState(false);
+  const [tableModalProps, setTableModalProps] = useState();
+
   const renderFacts = (fact, index) => {
     return(
       <li key={index}>
@@ -36,16 +45,33 @@ const Factsheet = () => {
   }
 
   const renderDisorders = (disorder, index) => {
+    console.log(disorder)
     return(
       <li key={index}>
-        <a style={{fontWeight: `${disorder.link ? "0" : "700"}`}} target="_blank" rel="noreferrer" href={disorder.link}>{disorder.name}:</a> {disorder.description}
+        {/* <a style={{fontWeight: `${disorder.link ? "0" : "700"}`}} target="_blank" rel="noreferrer" href={disorder.link}>{disorder.name}:</a> {disorder.description} */}
+        <span onClick={e => {setShowDisorderModal(true); setDisorderModalProps(disorder)}} style={{fontWeight:"700", cursor:"pointer", color: "#2162e6"}}>{disorder.name}</span>
+        <br/>
+        {disorder.shortDescription}
       </li>
     )
   }
 
+  const renderTableColumns = (data, index) => {
+    return(
+        <th key={index}>
+            {data}
+        </th>
+    )
+}
+
   const renderTable = (row, index) => {
     return (
-      <tr>
+      <tr 
+        onClick={()=> {
+        if(row.disorder !== "Any mental health disorder"){
+          setShowTableModal(true); setTableModalProps(row)
+        }}}
+        style={{cursor: `${row.disorder !== "Any mental health disorder" ? "pointer" : ""}`}}>
         <td>
           {row.disorder}
         </td>
@@ -110,44 +136,19 @@ const Factsheet = () => {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography className={classes.heading}>Charts on Mental Health (Table)</Typography>
+          <Typography className={classes.heading}>Charts on Mental Health</Typography>
         </AccordionSummary>
         <AccordionDetails>
         <table className="factsheet-table">
             <tr>
-                <th>Disorder</th>
-                <th>Share of global population with disorder (2017) [difference across countries]</th>
-                <th>Number of people with the disorder (2017)</th>
-                <th>Share of males:females with disorder (2017)</th>
+                {cols.map(renderTableColumns)}
             </tr>
             {rows.map(renderTable)}
+            <span style={{fontStyle: "italic", marginTop: "20px"}}>
+            <br/>
+            <a target="_blank" rel="noreferrer" href="https://ourworldindata.org/mental-health">Click here for more info</a>
+            </span>
         </table>
-        </AccordionDetails>
-      </Accordion>
-      <Accordion>
-        <AccordionSummary
-          expandIcon={<ExpandMoreIcon />}
-          aria-controls="panel3a-content"
-          id="panel3a-header"
-        >
-          <Typography className={classes.heading}>Charts on Mental Health (Globe)</Typography>
-        </AccordionSummary>
-        <AccordionDetails>
-          TODO // cant find 2020 stats
-        {/* <table className="factsheet-table">
-            <tr>
-                <th>Disorder</th>
-                <th>Share of global population with disorder (2017) [difference across countries]</th>
-                <th>Number of people with the disorder (2017)</th>
-                <th>Share of males:females with disorder (2017)</th>
-            </tr>
-            <tr>
-                <td>Any mental health disorder</td>
-                <td>10.7%</td>
-                <td>792 million</td>
-                <td>9.3 males% <br/> 11.9% females</td>
-            </tr>
-        </table> */}
         </AccordionDetails>
       </Accordion>
       <Accordion>
@@ -164,6 +165,14 @@ const Factsheet = () => {
           </Typography>
         </AccordionDetails>
       </Accordion>
+      {
+        disorderModalProps &&
+        <DisorderModal disorderModalProps={disorderModalProps} show={showDisorderModal} onHide={() => setShowDisorderModal(false)}></DisorderModal>
+      }
+      {
+        tableModalProps &&
+        <TableModal tableModalProps={tableModalProps} show={showTableModal} onHide={() => setShowTableModal(false)}></TableModal>
+      }
     </div>
   );
 }
