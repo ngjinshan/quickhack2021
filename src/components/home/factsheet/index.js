@@ -11,6 +11,7 @@ import './style.css';
 
 import {facts} from './_facts';
 import {disorders} from './_disorders';
+import {rows} from './_chartTable';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -39,6 +40,27 @@ const Factsheet = () => {
       <li key={index}>
         <a style={{fontWeight: `${disorder.link ? "0" : "700"}`}} target="_blank" rel="noreferrer" href={disorder.link}>{disorder.name}:</a> {disorder.description}
       </li>
+    )
+  }
+
+  const renderTable = (row, index) => {
+    return (
+      <tr>
+        <td>
+          {row.disorder}
+        </td>
+        <td>
+          {row.percentage} <br/>
+          {row.countryDifference}
+        </td>
+        <td>
+          {row.number}
+        </td>
+        <td>
+          {row.malePercentage} <br/>
+          {row.femalePercentage}
+        </td>
+      </tr>
     )
   }
   return (
@@ -91,21 +113,15 @@ const Factsheet = () => {
           <Typography className={classes.heading}>Charts on Mental Health (Table)</Typography>
         </AccordionSummary>
         <AccordionDetails>
-          TODO // cant find 2020 stats
-        {/* <table className="factsheet-table">
+        <table className="factsheet-table">
             <tr>
                 <th>Disorder</th>
                 <th>Share of global population with disorder (2017) [difference across countries]</th>
                 <th>Number of people with the disorder (2017)</th>
                 <th>Share of males:females with disorder (2017)</th>
             </tr>
-            <tr>
-                <td>Any mental health disorder</td>
-                <td>10.7%</td>
-                <td>792 million</td>
-                <td>9.3 males% <br/> 11.9% females</td>
-            </tr>
-        </table> */}
+            {rows.map(renderTable)}
+        </table>
         </AccordionDetails>
       </Accordion>
       <Accordion>
