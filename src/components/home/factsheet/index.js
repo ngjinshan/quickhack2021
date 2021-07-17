@@ -64,7 +64,7 @@ const Factsheet = () => {
     )
   }
   return (
-    <div className="common container factsheet" style={{paddingTop: "3%"}}>
+    <div id="factsheet" className="common container factsheet" style={{paddingTop: "3%"}}>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}

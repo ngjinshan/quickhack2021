@@ -5,7 +5,6 @@ MENTAL HEALTH
 
 - volunteering program
 
-- webinars (cards)
-- contact/partner
+- webinars (carousel of campaigns/webinars/events)
 
 - annonymous(optional) therapy session

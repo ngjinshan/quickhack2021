@@ -1,6 +1,3 @@
-[
-    {
-        "keywords": ["adfas", "Asdf", "Asdf"],
-        "diagnosis" : ""
-    }
-]
+data = [
+
+];
