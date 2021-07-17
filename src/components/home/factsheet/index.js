@@ -114,6 +114,32 @@ const Factsheet = () => {
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
+          <Typography className={classes.heading}>Charts on Mental Health (Globe)</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          TODO // cant find 2020 stats
+        {/* <table className="factsheet-table">
+            <tr>
+                <th>Disorder</th>
+                <th>Share of global population with disorder (2017) [difference across countries]</th>
+                <th>Number of people with the disorder (2017)</th>
+                <th>Share of males:females with disorder (2017)</th>
+            </tr>
+            <tr>
+                <td>Any mental health disorder</td>
+                <td>10.7%</td>
+                <td>792 million</td>
+                <td>9.3 males% <br/> 11.9% females</td>
+            </tr>
+        </table> */}
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel3a-content"
+          id="panel3a-header"
+        >
           <Typography className={classes.heading}>General factsheet by WHO</Typography>
         </AccordionSummary>
         <AccordionDetails>
