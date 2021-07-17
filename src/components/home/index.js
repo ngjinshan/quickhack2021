@@ -5,6 +5,7 @@ import Helpline from './helpline/';
 import Diagnosis from './diagnosis';
 
 import '../common.css'
+import Volunteer from './volunteer';
 
 const Home = () => {
     return(
@@ -13,6 +14,7 @@ const Home = () => {
             <Factsheet></Factsheet>
             <Diagnosis></Diagnosis>
             <Helpline></Helpline>
+            <Volunteer></Volunteer>
         </div>
     )
 }
