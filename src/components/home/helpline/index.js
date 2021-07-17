@@ -8,9 +8,11 @@ import {data, dataStructure} from './_data';
 
 const Helpline = () => {
 
+    const [country, setCountry] = useState("");
+
     const renderDropdownItem = (data, index) => {
         return(
-            <Dropdown.Item onClick={e => console.log("test")} key={index}>
+            <Dropdown.Item onClick={e => setCountry(data.country)} key={index}>
                 {data.country}
             </Dropdown.Item>
         )
@@ -36,7 +38,7 @@ const Helpline = () => {
                     </table>
                 </td>
                 <td>
-                    {data.link}
+                    {<a target="_blank" rel="noreferrer" href={data.link}>{data.link}</a>}
                 </td>
                 <td>
                     {data.location ? data.location : "-"}
@@ -48,10 +50,28 @@ const Helpline = () => {
     const renderHelplineContact = (data, index) => {
         let operatingHours = ""
         if(data["24/7"]){
-            operatingHours = "Open 24 hours 7 days a week";
+            operatingHours += "24/7";
         }
         else{
-            
+            let start = data.operatingStartHour;
+            let end = data.operatingEndHour;
+            let res = groupDate(start, end);
+            for (const [key, value] of Object.entries(res)) {
+                if(key==="closed"){
+                    continue;
+                }
+                if(value.length === 7) {
+                    operatingHours += "Mon-Sun: " + key + "\n"
+                }
+                else{
+                    if(value.length === 1) {
+                        operatingHours += value[0] + ": " + key + "\n"
+                    }
+                    else{
+                        operatingHours += value[0] + "-" + value[value.length-1] + ": " + key + "\n"
+                    }
+                }
+            }
         }
         return(
             <tr key={index}>
@@ -65,10 +85,51 @@ const Helpline = () => {
         )
     }
 
+    function groupDate(startTime, endTime){
+        let date =["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"]
+        let time = {};
+        let opHr = "";
+        for (let i = 0; i<startTime.length; i++){
+            if (startTime[i] || endTime[i]){
+                opHr = format12(startTime[i]) + "-" + format12(endTime[i])
+            }
+            else{
+                opHr = "closed"
+            }
+        
+            if(time[opHr]){
+                time[opHr].push(date[i])
+            }
+            else{
+                time[opHr] = [date[i]]
+            }
+        }   
+        return time;
+    }
+
+    function format12(time) {
+        let hh = time.substring(0, 2)
+        let mm = time.substring(2, 4)
+        let meridies = "AM"
+        if (parseInt(hh) >= 12) {
+          meridies = "PM"
+        }
+      
+        if (parseInt(hh) > 12) {
+          hh = parseInt(hh) - 12
+        }
+
+        if(hh === "00"){
+            hh = 12;
+        }
+      
+        return parseInt(hh) + ":" + mm + meridies
+      }
+
 
     return(
-        <div className="helpline common">
-            <div className="container">
+        <div id="helpline" className="helpline common">
+            <div className="container-fluid">
                 <div className="row">
                     <div className="helpline-title">
                         <h2>
@@ -78,7 +139,7 @@ const Helpline = () => {
                     <div className="col-lg-2">
                         <Dropdown>
                             <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                Select Country
+                                {country == "" ? "Select Country" : country}
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
                                 {data.map(renderDropdownItem)}
@@ -95,7 +156,7 @@ const Helpline = () => {
                             <tr>
                                 {dataStructure.map(renderHelplineColumns)}
                             </tr>
-                            {data.find(e => e.country === "Australia").organisation.map(renderHelplineRows)}
+                            {country !== "" && data.find(e => e.country === country).organisation.map(renderHelplineRows)}
                         </table>    
                     </div>
                 </div>
