@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import Carousel from 'react-multi-carousel';
 import {Card} from 'react-bootstrap';
 import 'react-multi-carousel/lib/styles.css';
@@ -7,6 +7,8 @@ import './style.css';
 import '../../common.css';
 
 import {_event} from '../../database/_event';
+import EventModal from '../modal/eventModal';
+import { Button } from 'react-bootstrap';
 
 const Event = () => {
 
@@ -29,6 +31,8 @@ const Event = () => {
           items: 1
         }
     };
+
+    const [showEventModal, setShowEventModal] = useState(false);
 
     const renderEvent = (data, index) => {
         return(
@@ -59,6 +63,12 @@ const Event = () => {
                 {_event.map(renderEvent)}
             </Carousel>
             </div>
+            <div className="container" style={{paddingTop: "1%"}}>
+                    <label>Want to submit an event?</label>
+                    <br/>
+                    <Button variant="primary" onClick={e => {setShowEventModal(true)}}>Submit</Button>
+            </div>
+            <EventModal show={showEventModal} onHide={() => setShowEventModal(false)}></EventModal>
         </div>
     )
 }
