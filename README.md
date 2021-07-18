@@ -38,8 +38,10 @@ npm start
 ## Events
 - List of events currently shown are random articles, campaigns and webinars
 - In a real scenario it would be populated with real events/campaigns/webinars etc
+### Event form
+- The event form is just a dummy form, so no data will actually be sent into any database
 
-## Volunteer form
+## Volunteer 
 - Mainly to help out with any events available or even contribute to the events list 
 - The form is just a dummy form, so no data will actually be sent into any database
 
