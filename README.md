@@ -42,7 +42,7 @@ npm start
 - The event form is just a dummy form, so no data will actually be sent into any database
 
 ## Volunteer 
-- Mainly to help out with any events available or even contribute to the events list 
+- Mainly to help out with any events available
 - The form is just a dummy form, so no data will actually be sent into any database
 
 ## APIMedic (Mental Health Diagnosis)
