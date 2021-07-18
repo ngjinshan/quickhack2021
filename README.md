@@ -52,3 +52,8 @@ let secret_key = YOUR_SECRET_KEY
 let api_key = YOUR_API_KEY
 ```
 - For more information head to their website for their official documentation @ apimedic.com
+### How it works
+- This API diagnoses health issues with an input of symptoms
+- There is a fixed set of symptoms to be chosen from, taken from APIMEDIC, and we have filtered the symptoms for mental health issues only
+- Users can select the symptoms and attempt to obtain a diagnosis
+- Each diagnosis is mapped to the symptoms chosen and is predicted using the API
