@@ -19,7 +19,7 @@ const Volunteer = () => {
             alert("Please fill up all fields");
         }
         else{
-            alert("Submitted!")
+            alert("Submitted! Our staff will contact you shortly")
             setName("")
             setIc("")
             setGender("")
