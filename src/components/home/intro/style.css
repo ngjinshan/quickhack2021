@@ -8,11 +8,12 @@
 
 .intro {
     background-image: url('../../../images/intro_banner_3.jpg');
-    height: 70vh;
+    height: fit-content;
     background-position: center;
     background-repeat: no-repeat; 
     background-size: cover; 
     /* background-color: whitesmoke; */
     padding-top: 5%;
+    padding-bottom: 5%;
     color: white;
 }

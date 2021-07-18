@@ -75,7 +75,7 @@ const Symptoms = (props) => {
                 </AccordionSummary>
                 <div className="container">
                     <div className="container" style={{maxHeight: "50vh", overflow: "scroll"}}>
-                        <div className="row" style={{position: "sticky", top: "0", backgroundColor: "white", width: "100%", zIndex: "999"}}>
+                        <div className="row" style={{position: "sticky", top: "0", backgroundColor: "white", zIndex: "999"}}>
                             <div className="col-lg-1">
                                 <label>Search</label>
                             </div>
