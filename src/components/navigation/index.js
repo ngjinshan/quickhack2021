@@ -21,7 +21,7 @@ const Navigation = () => {
         //     behavior: 'smooth'
         // })
         // el.scrollIntoView();
-        const offset = 120;
+        const offset = window.innerHeight/8;
         const bodyRect = document.body.getBoundingClientRect().top;
         const elementRect = el.getBoundingClientRect().top;
         const elementPosition = elementRect - bodyRect;
