@@ -6,7 +6,7 @@ import 'react-multi-carousel/lib/styles.css';
 import './style.css';
 import '../../common.css';
 
-import {_event} from './_event';
+import {_event} from '../../database/_event';
 
 const Event = () => {
 

@@ -8,7 +8,7 @@ import {getToken } from '../../../api';
 import './style.css';
 import '../../common.css';
 
-import {_symptoms} from './_symptoms';
+import {_symptoms} from '../../database/_symptoms';
 // import {symptoms_2} from './_symptoms_2';
 // import {getDiagosisUrl} from '../'
 const Diagnosis = () => {

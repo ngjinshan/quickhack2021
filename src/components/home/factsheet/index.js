@@ -9,11 +9,11 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import '../../common.css';
 import './style.css';
 
-import {_facts} from './_facts';
-import {_disorders} from './_disorders';
-import {_rows, _cols} from './_chartTable';
-import {_signs} from './_signs';
-import {_tips} from './_tips';
+import {_facts} from '../../database/_facts';
+import {_disorders} from '../../database/_disorders';
+import {_rows, _cols} from '../../database/_chartTable';
+import {_signs} from '../../database/_signs';
+import {_tips} from '../../database/_tips';
 
 import DisorderModal from '../modal/disorderModal';
 import TableModal from '../modal/tableModal';
@@ -69,10 +69,10 @@ const Factsheet = () => {
     return (
       <tr key={index}
         onClick={()=> {
-        if(row.disorder !== "Any mental health disorder"){
+        if(row.link){
           setShowTableModal(true); setTableModalProps(row)
         }}}
-        style={{cursor: `${row.disorder !== "Any mental health disorder" ? "pointer" : ""}`}}>
+        style={{cursor: `${row.link ? "pointer" : ""}`}}>
         <td>
           {row.disorder}
         </td>
