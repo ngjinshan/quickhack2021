@@ -4,7 +4,7 @@ import {Dropdown} from 'react-bootstrap'
 import './style.css';
 import '../../common.css';
 
-import {_rows, _cols} from './_data';
+import {_rows, _cols} from './_helpline';
 
 const Helpline = () => {
 
