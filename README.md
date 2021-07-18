@@ -51,3 +51,4 @@ In src/api.js lines 6 and 7:
 let secret_key = YOUR_SECRET_KEY
 let api_key = YOUR_API_KEY
 ```
+- For more information head to their website for their official documentation @ apimedic.com
