@@ -30,7 +30,7 @@ npm start
 ## Scalability 
 ### Mock database
 - For all data used in the project, we obtain them from a mock database (any js files starting with a underscore)
-- In our project, the database tables are \_symptoms, \_event, \_chartTable, \_disorders, \_helpline, \_tips, \_signs
+- In our project, the database tables are \_symptoms, \_event, \_chartTable, \_disorders, \_facts, \_tips, \_signs, \_helpline, 
 
 ## Volunteer form
 - The form is just a dummy form, so no data will actually be sent into any database
