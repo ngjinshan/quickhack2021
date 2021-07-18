@@ -14,7 +14,7 @@
 npm install
 ```
 
-### Start by running the following in terminal
+### Start by running the following in terminal in the root directory/path of the project folder
 ```bash
 npm start
 ```
@@ -35,7 +35,12 @@ npm start
 - For all data used in the project, we obtain them from a mock database (any js files starting with a underscore) in src/components/database
 - In our project, the database tables are \_symptoms, \_event, \_chartTable, \_disorders, \_facts, \_tips, \_signs, \_helpline, 
 
+## Events
+- List of events currently shown are random articles, campaigns and webinars
+- In a real scenario it would be populated with real events/campaigns/webinars etc
+
 ## Volunteer form
+- Mainly to help out with any events available or even contribute to the events list 
 - The form is just a dummy form, so no data will actually be sent into any database
 
 ## APIMedic (Mental Health Diagnosis)
@@ -52,3 +57,8 @@ let secret_key = YOUR_SECRET_KEY
 let api_key = YOUR_API_KEY
 ```
 - For more information head to their website for their official documentation @ apimedic.com
+### How it works
+- This API diagnoses health issues with an input of symptoms
+- There is a fixed set of symptoms to be chosen from, taken from APIMEDIC, and we have filtered the symptoms for mental health issues only
+- Users can select the symptoms and attempt to obtain a diagnosis
+- Each diagnosis is mapped to the symptoms chosen and is predicted using the API
