@@ -28,7 +28,7 @@ npm start
 ## Project Background
 ### Idea
 - Mental health has been a worrying issue especially during the pandemic
-- We aim to create a website where all important information regarding mental health can be obtained, from facts, tips and early signs to helpline numbers and a mental health diagnosis checker (prototype)
+- We aim to create a website where all important information regarding mental health can be obtained, from facts, tips and early signs to helpline numbers and a mental health diagnosis tool (prototype)
 
 ## Scalability 
 ### Mock database
