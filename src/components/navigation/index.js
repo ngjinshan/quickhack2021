@@ -37,13 +37,13 @@ const Navigation = () => {
             <Navbar.Brand>
                 <div style={{display: "flex", justifyContent: "start", alignItems: "center", width: "100%"}}>
                 <img alt="logo" src={img} width="75vw"></img>
-                <div style={{display: "block", paddingLeft: "12px"}}>
+                <div style={{display: "block", paddingLeft: "6px"}}>
                     <div>
-                        <i style={{paddingRight: "6px"}} className="far fa-envelope"></i>
+                        <i style={{paddingRight: "6px"}} className="far fa-envelope fa-xs"></i>
                         <span style={{fontSize: "x-small"}}>dummyemail@quickhack2021.com</span>
                     </div>
                     <div>
-                        <i style={{paddingRight: "6px"}} className="fas fa-phone"></i>
+                        <i style={{paddingRight: "6px"}} className="fas fa-phone fa-xs"></i>
                         <span style={{fontSize: "x-small"}}>+60123456789</span>
                     </div>  
                 </div>
