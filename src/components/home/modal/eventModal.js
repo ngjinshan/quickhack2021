@@ -52,7 +52,7 @@ const EventModal = (props) => {
                     </Form.Group>
                   
                     <Form.Group as={Row}>
-                        <Form.Label column sm={2}>Link: <span style={{color: "red"}}>*</span></Form.Label>
+                        <Form.Label column sm={2}>Event Link: <span style={{color: "red"}}>*</span></Form.Label>
                         <Col sm={9}>
                             <Form.Control className="input" type="text" value={link}
                              onChange={e => {setLink(e.target.value)}}/>
