@@ -186,7 +186,8 @@ const Diagnosis = () => {
         <div id="diagnosis" className="diagnosis common" style={{backgroundColor: "#f7f7f7", paddingTop: "5%", paddingBottom: "5%"}}>
             <div className="container">
                 <div className="row diagnosis-title">
-                    <h2>Self Diagnosis</h2>
+                    <h2 style={{paddingBottom: "0"}}>Mental Health Diagnosis</h2>
+                    <p style={{paddingBottom: "1%"}}>Remember to check up on your friends regularly!</p>
                 </div>
                 {/* <div className="row diagnosis-alphabets">
                     {_symptoms.map(renderAlphabets)}
