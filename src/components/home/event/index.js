@@ -39,7 +39,7 @@ const Event = () => {
                     '_blank' // <- This is what makes it open in a new window.
                 );
             }} 
-            key={index} style={{ width: '18rem', cursor: "pointer", height: "99%"}}>
+            key={index} style={{ width: '18rem', cursor: "pointer", height: "99%", marginLeft: "auto", marginRight: "auto"}}>
             <Card.Img variant="top" src={data.image} />
             <Card.Body>
                 <Card.Title>{data.title}</Card.Title>
