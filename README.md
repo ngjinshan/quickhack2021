@@ -40,7 +40,7 @@ npm start
 - In a real scenario it would be populated with real events/campaigns/webinars etc
 
 ## Volunteer form
-- Mainly to help out with any events available etc
+- Mainly to help out with any events available or even contribute to the events list 
 - The form is just a dummy form, so no data will actually be sent into any database
 
 ## APIMedic (Mental Health Diagnosis)
