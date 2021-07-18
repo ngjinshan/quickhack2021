@@ -25,12 +25,12 @@ npm start
 ## Project Background
 ### Idea
 - Mental health has been a worrying issue especially during the pandemic
-- We aim to create a website where all important information regarding mental health can be obtained, from facts to helpline numbers and a self diagnosis checker (prototype)
+- We aim to create a website where all important information regarding mental health can be obtained, from facts, tips and early signs to helpline numbers and a self diagnosis checker (prototype)
 
 ## Scalability 
 ### Mock database
 - For all data used in the project, we obtain them from a mock database (any js files starting with a underscore)
-- In our project, the database tables are \_symptoms, \_event, \_chartTable, \_disorders, \_helpline
+- In our project, the database tables are \_symptoms, \_event, \_chartTable, \_disorders, \_facts, \_tips, \_signs, \_helpline, 
 
 ## Volunteer form
 - The form is just a dummy form, so no data will actually be sent into any database
