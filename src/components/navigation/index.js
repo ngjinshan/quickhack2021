@@ -1,13 +1,16 @@
-import React, {useState, useEffect} from 'react';
-import {useHistory} from 'react-router';
-import { NavDropdown, Navbar, Nav, Form, FormControl, Button } from 'react-bootstrap';
+import React from 'react';
+// import {useHistory} from 'react-router';
+import {Navbar, Nav } from 'react-bootstrap';
 
 import './style.css';
-import { isElement } from 'react-dom/test-utils';
+import img from '../../images/buttersoft_standalone.png'
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 
 const Navigation = () => {
 
-    const history = useHistory();
+    // const history = useHistory();
 
     const navigate = (id) => {
         let el = document.getElementById(id);
@@ -21,7 +24,7 @@ const Navigation = () => {
         //     behavior: 'smooth'
         // })
         // el.scrollIntoView();
-        const offset = 75;
+        const offset = 150;
         const bodyRect = document.body.getBoundingClientRect().top;
         const elementRect = el.getBoundingClientRect().top;
         const elementPosition = elementRect - bodyRect;
@@ -33,19 +36,30 @@ const Navigation = () => {
         });
     }
     return(
-        <Navbar expand="md" sticky="top" bg="dark" variant="dark">
-            {/* <Nav.Link onClick={e => navigate("/")}>
-                <Navbar.Brand >Navbar</Navbar.Brand>
-            </Nav.Link> */}
+        <Navbar expand="md" sticky="top" style={{backgroundColor: "white"}}>
+            <Navbar.Brand>
+                <div style={{display: "flex", justifyContent: "start", alignItems: "center", width: "100%"}}>
+                <img src={img} width="75vw"></img>
+                <div style={{display: "block", paddingLeft: "12px"}}>
+                    <div>
+                        <i style={{paddingRight: "6px"}} class="far fa-envelope"></i>
+                        <span style={{fontSize: "small"}}>dummyemail@quickhack2021.com</span>
+                    </div>
+                    <div>
+                        <i style={{paddingRight: "6px"}} class="fas fa-phone"></i>
+                        <span style={{fontSize: "small"}}>+60123456789</span>
+                    </div>  
+                </div>
+                </div>
+            </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="mx-auto">
+            <Nav className="ml-auto">
             <Nav.Link onClick={e => navigate("factsheet")}>Factsheet</Nav.Link>
             <Nav.Link onClick={e => navigate("diagnosis")}>Self Diagnosis</Nav.Link>
             <Nav.Link onClick={e => navigate("helpline")}>Helpline</Nav.Link>
             <Nav.Link onClick={e => navigate("volunteer")}>Volunteer Today</Nav.Link>
-            <Nav.Link onClick={e => navigate("webinar")}>Webinar</Nav.Link>
-            <Nav.Link onClick={e => navigate("contact")}>Contact</Nav.Link>
+            <Nav.Link onClick={e => navigate("event")}>Event</Nav.Link>
             </Nav>
         </Navbar.Collapse>
         </Navbar>

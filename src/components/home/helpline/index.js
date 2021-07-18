@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react'
+import React, {useState} from 'react'
 import {Dropdown} from 'react-bootstrap'
 
 import './style.css';
@@ -33,9 +33,11 @@ const Helpline = () => {
                     {data.name}
                 </td>
                 <td>
-                    <table className="helpline-inner-table">
+                    <div style={{overflowX: "auto"}}>
+                    <table className="helpline-inner-table" style={{width: "100%"}}>
                         {data.contact.map(renderHelplineContact)}
                     </table>
+                    </div>
                 </td>
                 <td>
                     {<a target="_blank" rel="noreferrer" href={data.link}>{data.link}</a>}
@@ -138,8 +140,8 @@ const Helpline = () => {
                     </div>
                     <div className="col-lg-2">
                         <Dropdown>
-                            <Dropdown.Toggle variant="success" id="dropdown-basic">
-                                {country == "" ? "Select Country" : country}
+                            <Dropdown.Toggle variant="primary" id="dropdown-basic">
+                                {country === "" ? "Select Country" : country}
                             </Dropdown.Toggle>
                             <Dropdown.Menu>
                                 {_rows.map(renderDropdownItem)}
@@ -151,8 +153,8 @@ const Helpline = () => {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="helpline-content">
-                        <table className="helpline-table">
+                    <div className="helpline-content" style={{overflowX: "auto"}}>
+                        <table className="helpline-table" style={{width: "100%"}}>
                             <tr>
                                 {_cols.map(renderHelplineColumns)}
                             </tr>

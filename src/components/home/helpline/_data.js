@@ -1,9 +1,9 @@
 export const _cols = [
     //organization structure
-    "name",
-    "contact | operating hours",
-    "link",
-    "location",
+    "Name",
+    "Contact | Operating hours",
+    "Link",
+    "Location",
 ]
 
 export const _rows = [

@@ -5,3 +5,14 @@
 .intro-video {
     animation: fadein 3s;
 }
+
+.intro {
+    background-image: url('../../../images/intro_banner_3.jpg');
+    height: 70vh;
+    background-position: center;
+    background-repeat: no-repeat; 
+    background-size: cover; 
+    /* background-color: whitesmoke; */
+    padding-top: 5%;
+    color: white;
+}

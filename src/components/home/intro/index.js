@@ -4,7 +4,7 @@ import '../../common.css';
 
 const Intro = () => {
     return(
-        <div className="common intro">
+        <div className="intro">
             <div className="container-fluid">
                 <div className="row">
                     <div className="col-lg-6">

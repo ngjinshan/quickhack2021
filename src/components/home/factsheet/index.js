@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -66,7 +66,7 @@ const Factsheet = () => {
 
   const renderTable = (row, index) => {
     return (
-      <tr 
+      <tr key={index}
         onClick={()=> {
         if(row.disorder !== "Any mental health disorder"){
           setShowTableModal(true); setTableModalProps(row)
@@ -91,6 +91,11 @@ const Factsheet = () => {
   }
   return (
     <div id="factsheet" className="common container factsheet" style={{paddingTop: "3%"}}>
+      <div className="container">
+        <div className="row" style={{textAlign: "center"}}>
+            <h2>Factsheet</h2>
+        </div>
+      </div>
       <Accordion>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -139,7 +144,8 @@ const Factsheet = () => {
           <Typography className={classes.heading}>Charts on Mental Health</Typography>
         </AccordionSummary>
         <AccordionDetails>
-        <table className="factsheet-table">
+          <div style={{overflowX: "auto"}}>
+          <table className="factsheet-table">
             <tr>
                 {_cols.map(renderTableColumns)}
             </tr>
@@ -149,6 +155,8 @@ const Factsheet = () => {
             <a target="_blank" rel="noreferrer" href="https://ourworldindata.org/mental-health">Click here for more info</a>
             </span>
         </table>
+          </div>
+    
         </AccordionDetails>
       </Accordion>
       <Accordion>

@@ -1,12 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
-import AccordionDetails from '@material-ui/core/AccordionDetails';
+// import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
-import { Dropdown } from 'react-bootstrap';
+// import { Dropdown } from 'react-bootstrap';
 
 import './style.css';
 
@@ -26,11 +26,32 @@ const Symptoms = (props) => {
 
     const data = props.symptoms;
 
-    const RenderCheckbox = (data,index) => {  
+    // const RenderCheckbox = (data,index) => {  
+        // return(
+        //     <div key={index} className="col-lg-2" style={{border: "1px solid #ddd", display: "flex", justifyContent: "space-between", alignItems: "center"}}>
+        //         <label style={{textAlign: "left", width: "70%"}}>{data.name}</label>
+        //         <input id={data.name} value={data.id} className="symptom-checkbox" type="checkbox" style={{width: "16px", height: "16px"}}></input>
+        //     </div>
+        // )
+    // }
+
+    const renderCheckbox = (data,index) => {
         return(
             <div key={index} className="col-lg-2" style={{border: "1px solid #ddd", display: "flex", justifyContent: "space-between", alignItems: "center"}}>
                 <label style={{textAlign: "left", width: "70%"}}>{data.name}</label>
                 <input id={data.name} value={data.id} className="symptom-checkbox" type="checkbox" style={{width: "16px", height: "16px"}}></input>
+            </div>
+        )
+    }
+
+    const renderSymptoms = (data, index) => {
+        if(data.checkbox.length === 0){
+            return null;
+        }
+        return(
+            <div key={index} className="row" style={{paddingBottom: "1%"}}>
+                <p style={{textAlign: "left", fontWeight: "700"}}>{data.alphabet}</p>
+                {data.checkbox.map(renderCheckbox)}
             </div>
         )
     }
@@ -46,10 +67,11 @@ const Symptoms = (props) => {
                 <Typography className={classes.heading}>Symptoms</Typography>
                 </AccordionSummary>
                 <div className="container">
-                    <div className="container">
-                        <div className="row symptoms" style={{paddingBottom: "1%"}}>
+                    <div className="container" style={{maxHeight: "50vh", overflow: "scroll"}}>
+                        {data.map(renderSymptoms)}
+                        {/* <div className="row symptoms" style={{paddingBottom: "1%"}}>
                             {data.checkbox.map(RenderCheckbox)}
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </Accordion>

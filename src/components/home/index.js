@@ -6,6 +6,7 @@ import Diagnosis from './diagnosis';
 
 import '../common.css'
 import Volunteer from './volunteer';
+import Event from './event';
 
 const Home = () => {
     return(
@@ -14,6 +15,7 @@ const Home = () => {
             <Factsheet></Factsheet>
             <Diagnosis></Diagnosis>
             <Helpline></Helpline>
+            <Event></Event>
             <Volunteer></Volunteer>
         </div>
     )

@@ -37,36 +37,32 @@ export const getToken = () => {
 }	
 
 
-const baseUrl = "https://healthservice.priaid.ch"
-const getDiagosisUrl = async (symptoms, gender, age)=> {
-
-
-
-    
-}
-
-// async function fetchDiagosis(symptoms, gender, age) {
-//     let result = ""
-//     await fetch(getDiagosisUrl(symptoms, gender, age))
-//         .then(response => response.json())
-//         .then(data => result = data);
-//     return result
+// const baseUrl = "https://healthservice.priaid.ch"
+// const getDiagosisUrl = async (symptoms, gender, age)=> { 
 // }
 
-export const fetchDiagosis = async (symptoms, gender, age) => {
-    getToken().then(e => {
-        console.log(e)
-        let url = baseUrl + "/diagnosis?symptoms=[" + symptoms + "]&gender=" + gender.toLowerCase() + "&year_of_birth=" + age + "&token=" + e + "&format=json&language=en-gb"
-        // console.log(url)
-        fetch(url)
-        .then(response => {
-            // console.log(response)
-            return response.json()
-        })
-        .then(data => {
-            console.log(data); 
-            return data
-        });
-    })
-    // console.log(url)
-};
+// // async function fetchDiagosis(symptoms, gender, age) {
+// //     let result = ""
+// //     await fetch(getDiagosisUrl(symptoms, gender, age))
+// //         .then(response => response.json())
+// //         .then(data => result = data);
+// //     return result
+// // }
+
+// export const fetchDiagosis = async (symptoms, gender, age) => {
+//     getToken().then(e => {
+//         console.log(e)
+//         let url = baseUrl + "/diagnosis?symptoms=[" + symptoms + "]&gender=" + gender.toLowerCase() + "&year_of_birth=" + age + "&token=" + e + "&format=json&language=en-gb"
+//         // console.log(url)
+//         fetch(url)
+//         .then(response => {
+//             // console.log(response)
+//             return response.json()
+//         })
+//         .then(data => {
+//             console.log(data); 
+//             return data
+//         });
+//     })
+//     // console.log(url)
+// };

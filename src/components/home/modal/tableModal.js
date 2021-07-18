@@ -21,7 +21,7 @@ const TableModal = (props) => {
             </Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <iframe src={data.link} width="100%" height="600px"></iframe>
+            <iframe title="chart" src={data.link} width="100%" height="600px"></iframe>
           </Modal.Body>
           <Modal.Footer>
             <Button onClick={props.onHide}>Close</Button>
