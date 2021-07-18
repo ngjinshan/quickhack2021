@@ -35,7 +35,7 @@ npm start
 ## Volunteer form
 - The form is just a dummy form, so no data will actually be sent into any database
 
-## APIMedic
+## APIMedic (Self Diagnosis)
 ### API KEY
 - The API key used for the APIMedic (Self Diagnosis) has a limit up to 100 calls per month
 - To obtain a new API, if the limit has been exceeded, go to APIMedic and register an account @ apimedic.com and go to the API KEYS page
