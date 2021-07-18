@@ -3,8 +3,8 @@ const request = require('request');
 const Promise = require('promise');
 
 var auth_uri = 'https://authservice.priaid.ch/login';
-let secret_key = "Rm4b9JAo8q5KLn3x2"
-let api_key = "x8QJt_GMAIL_COM_AUT"
+let secret_key = "c8BYn56RbWy2x7T4P" //100 calls only
+let api_key = "w4H5S_STUDENT_MONASH_EDU_AUT"
 
 //function to get hashed string 
 const genHashString = () => {
