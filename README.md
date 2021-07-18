@@ -29,7 +29,7 @@ npm start
 
 ## Scalability 
 ### Mock database
-- For all data used in the project, we obtain them from a mock database (any js files starting with a underscore)
+- For all data used in the project, we obtain them from a mock database (any js files starting with a underscore) in src/components/database
 - In our project, the database tables are \_symptoms, \_event, \_chartTable, \_disorders, \_facts, \_tips, \_signs, \_helpline, 
 
 ## Volunteer form
