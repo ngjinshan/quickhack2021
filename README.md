@@ -14,7 +14,7 @@
 npm install
 ```
 
-### Start by running the following in terminal
+### Start by running the following in terminal in the root directory/path of the project folder
 ```bash
 npm start
 ```
