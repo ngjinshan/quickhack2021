@@ -74,7 +74,7 @@ const Diagnosis = () => {
         let checkboxes = document.querySelectorAll('input[type=checkbox]:checked')
         let temp = [];
         for(let i=0; i<checkboxes.length; i++){
-            console.log(checkboxes[i].getAttribute("value"))
+            // console.log(checkboxes[i].getAttribute("value"))
             temp.push(checkboxes[i].getAttribute("value"))
         }
         // setDiagnose(true);
