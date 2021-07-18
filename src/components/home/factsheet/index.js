@@ -12,7 +12,8 @@ import './style.css';
 import {_facts} from './_facts';
 import {_disorders} from './_disorders';
 import {_rows, _cols} from './_chartTable';
-
+import {_signs} from './_signs';
+import {_tips} from './_tips';
 
 import DisorderModal from '../modal/disorderModal';
 import TableModal from '../modal/tableModal';
@@ -110,6 +111,40 @@ const Factsheet = () => {
                 {_facts.map(renderFacts)}
             </ul>
             <a style={{fontStyle: "italic"}} target="_blank" rel="noreferrer" href="https://www.who.int/news-room/facts-in-pictures/detail/mental-health">Source</a>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>Early signs to look out for</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            <ul>
+                {_signs.map(renderFacts)}
+            </ul>
+            <a style={{fontStyle: "italic"}} target="_blank" rel="noreferrer" href="https://blog.thetransitionhouse.org/10-early-warning-signs-of-mental-illness">Source</a>
+          </Typography>
+        </AccordionDetails>
+      </Accordion>
+      <Accordion>
+        <AccordionSummary
+          expandIcon={<ExpandMoreIcon />}
+          aria-controls="panel1a-content"
+          id="panel1a-header"
+        >
+          <Typography className={classes.heading}>Tips for good mental health</Typography>
+        </AccordionSummary>
+        <AccordionDetails>
+          <Typography>
+            <ul>
+                {_tips.map(renderFacts)}
+            </ul>
+            <a style={{fontStyle: "italic"}} target="_blank" rel="noreferrer" href="https://www.peoplefirstinfo.org.uk/health-and-well-being/mental-health/10-top-tips-for-good-mental-health/">Source</a>
           </Typography>
         </AccordionDetails>
       </Accordion>
