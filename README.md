@@ -28,7 +28,7 @@ npm start
 ## Project Background
 ### Idea
 - Mental health has been a worrying issue especially during the pandemic
-- We aim to create a website where all important information regarding mental health can be obtained, from facts, tips and early signs to helpline numbers and a self diagnosis checker (prototype)
+- We aim to create a website where all important information regarding mental health can be obtained, from facts, tips and early signs to helpline numbers and a mental health diagnosis checker (prototype)
 
 ## Scalability 
 ### Mock database
@@ -38,7 +38,7 @@ npm start
 ## Volunteer form
 - The form is just a dummy form, so no data will actually be sent into any database
 
-## APIMedic (Self Diagnosis)
+## APIMedic (Mental Health Diagnosis)
 ### API KEY
 - The API key used for the APIMedic (Self Diagnosis) has a limit up to 100 calls per month
 - To obtain a new API, if the limit has been exceeded, go to APIMedic and register an account @ apimedic.com and go to the API KEYS page
