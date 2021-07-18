@@ -79,13 +79,13 @@ const Diagnosis = () => {
         }
         // setDiagnose(true);
         // setChecked(temp);
-        console.log(temp)
-        console.log(age)
-        console.log(gender)
+        // console.log(temp)
+        // console.log(age)
+        // console.log(gender)
 
         const baseUrl = "https://healthservice.priaid.ch"
         getToken().then(e => {
-            console.log(e)
+            // console.log(e)
             let url = baseUrl + "/diagnosis?symptoms=[" + temp + "]&gender=" + gender.toLowerCase() + "&year_of_birth=" + age + "&token=" + e + "&format=json&language=en-gb"
             // console.log(url)
             fetch(url)
@@ -94,7 +94,7 @@ const Diagnosis = () => {
                 return response.json()
             })
             .then(data => {
-                console.log(data); 
+                // console.log(data); 
                 if(data.length > 0) {
                     setDiagnosis({
                         "name" :data[0]['Issue']['Name']
@@ -105,7 +105,7 @@ const Diagnosis = () => {
                         return response.json()
                     })
                     .then(data => {
-                        console.log(data)
+                        // console.log(data)
                         // console.log(diagnosis)
                         setDiagnosis({...data})
                         setShowDiagnosis(true)
@@ -124,7 +124,7 @@ const Diagnosis = () => {
     }
 
     const renderDiagnosis = () => {
-        console.log(diagnosis)
+        // console.log(diagnosis)
 
         if(Object.keys(diagnosis).length === 0){
             return(
