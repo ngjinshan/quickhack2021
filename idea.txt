@@ -2,9 +2,7 @@ MENTAL HEALTH
 - factsheet
 - search function -- enter symptom get diagnosis
 - Helpline and therapy services list
-
 - volunteering program
-
 - webinars (carousel of campaigns/webinars/events)
 
 - annonymous(optional) therapy session
