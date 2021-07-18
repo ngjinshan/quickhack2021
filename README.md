@@ -36,7 +36,7 @@ npm start
 - In our project, the database tables are \_symptoms, \_event, \_chartTable, \_disorders, \_facts, \_tips, \_signs, \_helpline, 
 
 ## Events
-- List of events currently shown are random campaigns and webinars
+- List of events currently shown are random articles, campaigns and webinars
 - In a real scenario it would be populated with real events/campaigns/webinars etc
 
 ## Volunteer form
