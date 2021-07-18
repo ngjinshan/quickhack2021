@@ -5,9 +5,6 @@ import {Navbar, Nav } from 'react-bootstrap';
 import './style.css';
 import img from '../../images/buttersoft_standalone.png'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
-
 const Navigation = () => {
 
     // const history = useHistory();
@@ -39,7 +36,7 @@ const Navigation = () => {
         <Navbar expand="md" sticky="top" style={{backgroundColor: "white"}}>
             <Navbar.Brand>
                 <div style={{display: "flex", justifyContent: "start", alignItems: "center", width: "100%"}}>
-                <img src={img} width="75vw"></img>
+                <img alt="logo" src={img} width="75vw"></img>
                 <div style={{display: "block", paddingLeft: "12px"}}>
                     <div>
                         <i style={{paddingRight: "6px"}} class="far fa-envelope"></i>
