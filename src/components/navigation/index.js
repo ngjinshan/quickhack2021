@@ -58,8 +58,8 @@ const Navigation = () => {
             <Nav.Link onClick={e => navigate("factsheet")}>Factsheet</Nav.Link>
             <Nav.Link onClick={e => navigate("diagnosis")}>Self Diagnosis</Nav.Link>
             <Nav.Link onClick={e => navigate("helpline")}>Helpline</Nav.Link>
-            <Nav.Link onClick={e => navigate("volunteer")}>Volunteer Today</Nav.Link>
             <Nav.Link onClick={e => navigate("event")}>Event</Nav.Link>
+            <Nav.Link onClick={e => navigate("volunteer")}>Volunteer Today</Nav.Link>
             </Nav>
         </Navbar.Collapse>
         </Navbar>
