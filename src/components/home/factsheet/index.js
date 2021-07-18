@@ -46,7 +46,7 @@ const Factsheet = () => {
   }
 
   const renderDisorders = (disorder, index) => {
-    console.log(disorder)
+    // console.log(disorder)
     return(
       <li key={index}>
         {/* <a style={{fontWeight: `${disorder.link ? "0" : "700"}`}} target="_blank" rel="noreferrer" href={disorder.link}>{disorder.name}:</a> {disorder.description} */}
@@ -185,10 +185,8 @@ const Factsheet = () => {
                 {_cols.map(renderTableColumns)}
             </tr>
             {_rows.map(renderTable)}
-            <span style={{fontStyle: "italic", marginTop: "20px"}}>
             <br/>
-            <a target="_blank" rel="noreferrer" href="https://ourworldindata.org/mental-health">Click here for more info</a>
-            </span>
+            <a style={{fontStyle: "italic", marginTop: "20px"}} target="_blank" rel="noreferrer" href="https://ourworldindata.org/mental-health">Click here for more info</a>
         </table>
           </div>
     

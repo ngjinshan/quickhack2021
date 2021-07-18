@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
@@ -11,6 +11,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import './style.css';
 
 const Symptoms = (props) => {
+
+    const [filter, setFilter] = useState("");
 
     const useStyles = makeStyles((theme) => ({
         root: {
@@ -49,11 +51,16 @@ const Symptoms = (props) => {
             return null;
         }
         return(
-            <div key={index} className="row" style={{paddingBottom: "1%"}}>
-                <p style={{textAlign: "left", fontWeight: "700"}}>{data.alphabet}</p>
+            <div key={index} className="row" style={{paddingBottom: "1%", visibility: `${data.alphabet.includes(filter) ? "visible" : "hidden"}`, display: `${data.alphabet.includes(filter) ? "flex" : "none"}`}}>
+                <p id={`alphabet-${data.alphabet}`} style={{textAlign: "left", fontWeight: "700"}}>{data.alphabet}</p>
                 {data.checkbox.map(renderCheckbox)}
             </div>
         )
+    }
+
+    const searchFunction = (e) => {
+        let alphabet = e.trim().substring(0,1).toUpperCase()
+        setFilter(alphabet);
     }
 
     return(
@@ -68,6 +75,14 @@ const Symptoms = (props) => {
                 </AccordionSummary>
                 <div className="container">
                     <div className="container" style={{maxHeight: "50vh", overflow: "scroll"}}>
+                        <div className="row" style={{position: "sticky", top: "0", backgroundColor: "white", width: "100%", zIndex: "999"}}>
+                            <div className="col-lg-1">
+                                <label>Search</label>
+                            </div>
+                            <div className="col-lg-2">
+                                <input onChange={e => searchFunction(e.target.value)} type="text"></input>
+                            </div>
+                        </div>
                         {data.map(renderSymptoms)}
                         {/* <div className="row symptoms" style={{paddingBottom: "1%"}}>
                             {data.checkbox.map(RenderCheckbox)}

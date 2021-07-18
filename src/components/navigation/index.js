@@ -39,11 +39,11 @@ const Navigation = () => {
                 <img alt="logo" src={img} width="75vw"></img>
                 <div style={{display: "block", paddingLeft: "12px"}}>
                     <div>
-                        <i style={{paddingRight: "6px"}} class="far fa-envelope"></i>
+                        <i style={{paddingRight: "6px"}} className="far fa-envelope"></i>
                         <span style={{fontSize: "small"}}>dummyemail@quickhack2021.com</span>
                     </div>
                     <div>
-                        <i style={{paddingRight: "6px"}} class="fas fa-phone"></i>
+                        <i style={{paddingRight: "6px"}} className="fas fa-phone"></i>
                         <span style={{fontSize: "small"}}>+60123456789</span>
                     </div>  
                 </div>
