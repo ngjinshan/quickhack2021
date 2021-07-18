@@ -1,5 +1,8 @@
 # QuickHack 2021 - Mental Health Theme
 
+## Git repo link
+- https://github.com/ngjinshan/quickhack2021.git
+
 ## Requirements
 ### Dependencies used:
 - npm 6.13.4
