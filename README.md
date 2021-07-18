@@ -35,7 +35,12 @@ npm start
 - For all data used in the project, we obtain them from a mock database (any js files starting with a underscore) in src/components/database
 - In our project, the database tables are \_symptoms, \_event, \_chartTable, \_disorders, \_facts, \_tips, \_signs, \_helpline, 
 
+## Events
+- List of events currently shown are random campaigns and webinars
+- In a real scenario it would be populated with real events/campaigns/webinars etc
+
 ## Volunteer form
+- Mainly to help out with any events available etc
 - The form is just a dummy form, so no data will actually be sent into any database
 
 ## APIMedic (Mental Health Diagnosis)
